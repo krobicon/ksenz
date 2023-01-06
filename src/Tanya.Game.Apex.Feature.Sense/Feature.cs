@@ -26,7 +26,11 @@ namespace Tanya.Game.Apex.Feature.Sense
                 {
                     if (player.IsValid() && !player.IsSameTeam(localPlayer))
                     {
-                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
+                        if ( _config.Distance == 222)
+                        {
+                            player.GlowEnable = 7;
+                        }
+                        else if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
                         {
                             player.GlowEnable = (byte)(player.Visible ? 5 : 7);
                             player.GlowThroughWalls = (byte)(player.Visible ? 1 : 2);
