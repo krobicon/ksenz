@@ -11,6 +11,7 @@ namespace Tanya.Game.Apex.Core.Models
     {
         private readonly Access<byte> _inAttack;
         private readonly Access<byte> _inSpeed;
+        private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
 
         #region Constructors
