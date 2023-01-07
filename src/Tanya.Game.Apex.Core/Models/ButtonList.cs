@@ -39,6 +39,13 @@ namespace Tanya.Game.Apex.Core.Models
             get => _inSpeed.Get();
             set => _inSpeed.Set(value);
         }
+        
+        [JsonPropertyName("inWalk")]
+        public byte InWalk
+        {
+            get => _inWalk.Get();
+            set => _inWalk.Set(value);
+        }
 
         [JsonPropertyName("inZoom")]
         public byte InZoom
