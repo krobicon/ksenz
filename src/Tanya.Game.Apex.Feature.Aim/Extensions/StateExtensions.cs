@@ -22,7 +22,7 @@ namespace Tanya.Game.Apex.Feature.Aim.Extensions
                 return state.Buttons.InSpeed != 0 ? TargetType.All : TargetType.Enemy;
             }
 
-            if (state.Buttons.InSpeed != 0)
+            if (state.Buttons.InZoom != 0)
             {
                 return TargetType.Enemy;
             }
