@@ -6,6 +6,7 @@
 
         uint ButtonInAttack { get; }
         uint ButtonInSpeed { get; }
+        uint ButtonInWalk { get; }
         uint ButtonInZoom { get; }
         uint CoreEntityList { get; }
         uint CoreLevelName { get; }
