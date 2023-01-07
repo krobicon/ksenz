@@ -19,6 +19,7 @@ namespace Tanya.Game.Apex.Core.Models
         {
             _inAttack = driver.Access(address + offsets.ButtonInAttack, ByteType.Instance);
             _inSpeed = driver.Access(address + offsets.ButtonInSpeed, ByteType.Instance);
+            _inWalk = driver.Access(address + offsets.ButtonInWalk, ByteType.Instance);
             _inZoom = driver.Access(address + offsets.ButtonInZoom, ByteType.Instance);
         }
 
