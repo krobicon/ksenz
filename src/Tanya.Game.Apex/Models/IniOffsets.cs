@@ -37,6 +37,7 @@ namespace Tanya.Game.Apex.Models
 
         public uint ButtonInAttack => _ini.Get("Buttons", "in_attack");
         public uint ButtonInSpeed => _ini.Get("Buttons", "in_speed");
+        public uint ButtonInSpeed => _ini.Get("Buttons", "in_walk");
         public uint ButtonInZoom => _ini.Get("Buttons", "in_zoom");
         public uint CoreEntityList => _ini.Get("Miscellaneous", "cl_entitylist");
         public uint CoreLevelName => _ini.Get("Miscellaneous", "LevelName");
