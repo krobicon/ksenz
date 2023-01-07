@@ -64,6 +64,7 @@ namespace Tanya.Game.Apex.Core.Models
         {
             _inAttack.Update(frameTime);
             _inSpeed.Update(frameTime);
+            _inWalk.Update(frameTime);
             _inZoom.Update(frameTime);
         }
 
