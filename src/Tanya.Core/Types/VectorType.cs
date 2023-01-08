@@ -1,8 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
-using Tanya.Core.Interfaces;
-using Tanya.Core.Models;
+using ksenz.Core.Interfaces;
+using ksenz.Core.Models;
 
-namespace Tanya.Core.Types
+namespace ksenz.Core.Types
 {
     public class VectorType : IType<Vector>
     {

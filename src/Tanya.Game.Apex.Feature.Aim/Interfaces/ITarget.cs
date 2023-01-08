@@ -1,7 +1,7 @@
-﻿using Tanya.Core.Models;
-using Tanya.Game.Apex.Core.Models;
+﻿using ksenz.Core.Models;
+using ksenz.Game.Apex.Core.Models;
 
-namespace Tanya.Game.Apex.Feature.Aim.Interfaces
+namespace ksenz.Game.Apex.Feature.Aim.Interfaces
 {
     public interface ITarget
     {

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Tanya.Driver.Linux.Interop
+namespace ksenz.Driver.Linux.Interop
 {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct Iovec

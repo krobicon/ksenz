@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Tanya.Driver.Linux.Interop
+namespace ksenz.Driver.Linux.Interop
 {
     public static class Libc
     {

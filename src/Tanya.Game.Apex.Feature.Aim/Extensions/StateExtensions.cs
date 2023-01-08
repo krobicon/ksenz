@@ -1,10 +1,10 @@
-﻿using Tanya.Game.Apex.Core;
-using Tanya.Game.Apex.Core.Models;
-using Tanya.Game.Apex.Feature.Aim.Enums;
-using Tanya.Game.Apex.Feature.Aim.Interfaces;
-using Tanya.Game.Apex.Feature.Aim.Models;
+﻿using ksenz.Game.Apex.Core;
+using ksenz.Game.Apex.Core.Models;
+using ksenz.Game.Apex.Feature.Aim.Enums;
+using ksenz.Game.Apex.Feature.Aim.Interfaces;
+using ksenz.Game.Apex.Feature.Aim.Models;
 
-namespace Tanya.Game.Apex.Feature.Aim.Extensions
+namespace ksenz.Game.Apex.Feature.Aim.Extensions
 {
     public static class StateExtensions
     {

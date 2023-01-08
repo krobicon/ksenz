@@ -11,10 +11,10 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tanya.Core\Tanya.Core.csproj" />
-    <ProjectReference Include="..\Tanya.Driver.Linux\Tanya.Driver.Linux.csproj" />
-    <ProjectReference Include="..\Tanya.Driver\Tanya.Driver.csproj" />
-    <ProjectReference Include="..\Tanya.Game.Apex\Tanya.Game.Apex.csproj" />
+    <ProjectReference Include="..\ksenz.Core\ksenz.Core.csproj" />
+    <ProjectReference Include="..\ksenz.Driver.Linux\ksenz.Driver.Linux.csproj" />
+    <ProjectReference Include="..\ksenz.Driver\ksenz.Driver.csproj" />
+    <ProjectReference Include="..\ksenz.Game.Apex\ksenz.Game.Apex.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="appsettings.json">

@@ -1,7 +1,7 @@
-using Tanya.Core.Interfaces;
-using Tanya.Driver.Interfaces;
+using ksenz.Core.Interfaces;
+using ksenz.Driver.Interfaces;
 
-namespace Tanya.Core.Extensions
+namespace ksenz.Core.Extensions
 {
     public static class DriverExtensions
     {

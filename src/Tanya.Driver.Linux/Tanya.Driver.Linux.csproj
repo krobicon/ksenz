@@ -6,6 +6,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tanya.Driver\Tanya.Driver.csproj" />
+    <ProjectReference Include="..\ksenz.Driver\ksenz.Driver.csproj" />
   </ItemGroup>
 </Project>

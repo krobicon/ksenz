@@ -1,6 +1,6 @@
-﻿using Tanya.Driver.Interfaces;
+﻿using ksenz.Driver.Interfaces;
 
-namespace Tanya.Driver
+namespace ksenz.Driver
 {
     public class EmptyDriver : IDriver
     {

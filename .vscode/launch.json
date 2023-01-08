@@ -1,10 +1,10 @@
 {
   "version": "0.2.0",
   "configurations": [{
-    "cwd": "${workspaceFolder}/src/popos/bin/Debug/net6.0",
+    "cwd": "${workspaceFolder}/src/ksenz/bin/Debug/net6.0",
     "name": "launch",
     "preLaunchTask": "build",
-    "program": "${workspaceFolder}/src/popos/bin/Debug/net6.0/popos.dll",
+    "program": "${workspaceFolder}/src/ksenz/bin/Debug/net6.0/ksenz.dll",
     "request": "launch",
     "type": "coreclr"
   }]

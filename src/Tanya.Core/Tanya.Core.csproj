@@ -8,6 +8,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tanya.Driver\Tanya.Driver.csproj" />
+    <ProjectReference Include="..\ksenz.Driver\ksenz.Driver.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-namespace Tanya.Driver.Linux.Enums
+namespace ksenz.Driver.Linux.Enums
 {
     [Flags]
     public enum PermissionType

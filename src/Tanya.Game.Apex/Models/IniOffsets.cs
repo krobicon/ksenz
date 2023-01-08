@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using Tanya.Game.Apex.Core.Interfaces;
+using ksenz.Game.Apex.Core.Interfaces;
 
-namespace Tanya.Game.Apex.Models
+namespace ksenz.Game.Apex.Models
 {
     [JsonConverter(typeof(IniOffsetsSerializer))]
     public class IniOffsets : IOffsets

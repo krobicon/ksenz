@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Diagnostics;
 
-namespace Tanya.Logging
+namespace ksenz.Logging
 {
     public class LoggerWriter : IDisposable
     {
@@ -64,7 +64,7 @@ namespace Tanya.Logging
 
         private async Task ProcessAsync()
         {
-            await using var fileStream = File.Open("Tanya.log", FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
+            await using var fileStream = File.Open("ksenz.log", FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
             await using var writer = new StreamWriter(fileStream);
 
             var isDebugging = Debugger.IsAttached;

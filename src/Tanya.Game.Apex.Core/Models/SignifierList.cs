@@ -1,8 +1,8 @@
 ﻿using System.Collections.Concurrent;
-using Tanya.Driver.Interfaces;
-using Tanya.Game.Apex.Core.Interfaces;
+using ksenz.Driver.Interfaces;
+using ksenz.Game.Apex.Core.Interfaces;
 
-namespace Tanya.Game.Apex.Core.Models
+namespace ksenz.Game.Apex.Core.Models
 {
     public class SignifierList : IUpdatable
     {

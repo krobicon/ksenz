@@ -1,7 +1,7 @@
-﻿using Tanya.Game.Apex.Core;
-using Tanya.Game.Apex.Core.Interfaces;
+﻿using ksenz.Game.Apex.Core;
+using ksenz.Game.Apex.Core.Interfaces;
 
-namespace Tanya.Game.Apex.Feature.Sense
+namespace ksenz.Game.Apex.Feature.Sense
 {
     public class Feature : IFeature
     {

@@ -1,7 +1,7 @@
-﻿using Tanya.Core.Interfaces;
-using Tanya.Driver.Interfaces;
+﻿using ksenz.Core.Interfaces;
+using ksenz.Driver.Interfaces;
 
-namespace Tanya.Core
+namespace ksenz.Core
 {
     public class Access<T>
     {

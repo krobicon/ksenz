@@ -1,9 +1,9 @@
 ﻿using System.Text.Json.Serialization;
-using Tanya.Core.Models;
-using Tanya.Game.Apex.Core.Models;
-using Tanya.Game.Apex.Feature.Aim.Interfaces;
+using ksenz.Core.Models;
+using ksenz.Game.Apex.Core.Models;
+using ksenz.Game.Apex.Feature.Aim.Interfaces;
 
-namespace Tanya.Game.Apex.Feature.Aim.Models
+namespace ksenz.Game.Apex.Feature.Aim.Models
 {
     public class PlayerTarget : ITarget
     {

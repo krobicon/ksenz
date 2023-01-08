@@ -1,4 +1,4 @@
-﻿namespace Tanya.Core
+﻿namespace ksenz.Core
 {
     public static class Reuse
     {

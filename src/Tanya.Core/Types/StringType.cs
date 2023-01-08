@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using Tanya.Core.Interfaces;
+using ksenz.Core.Interfaces;
 
-namespace Tanya.Core.Types
+namespace ksenz.Core.Types
 {
     public class StringType : IType<string>
     {

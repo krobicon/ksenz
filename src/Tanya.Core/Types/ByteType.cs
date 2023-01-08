@@ -1,6 +1,6 @@
-﻿using Tanya.Core.Interfaces;
+﻿using ksenz.Core.Interfaces;
 
-namespace Tanya.Core.Types
+namespace ksenz.Core.Types
 {
     public class ByteType : IType<byte>
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
 
-namespace Tanya.Logging
+namespace ksenz.Logging
 {
     public class LoggerProvider : ILoggerProvider
     {

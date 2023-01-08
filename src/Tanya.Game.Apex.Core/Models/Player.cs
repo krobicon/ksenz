@@ -1,13 +1,13 @@
 ﻿using System.Text.Json.Serialization;
-using Tanya.Core;
-using Tanya.Core.Extensions;
-using Tanya.Core.Models;
-using Tanya.Core.Types;
-using Tanya.Driver.Interfaces;
-using Tanya.Game.Apex.Core.Interfaces;
-using Tanya.Game.Apex.Core.Utilities;
+using ksenz.Core;
+using ksenz.Core.Extensions;
+using ksenz.Core.Models;
+using ksenz.Core.Types;
+using ksenz.Driver.Interfaces;
+using ksenz.Game.Apex.Core.Interfaces;
+using ksenz.Game.Apex.Core.Utilities;
 
-namespace Tanya.Game.Apex.Core.Models
+namespace ksenz.Game.Apex.Core.Models
 {
     public class Player : IUpdatable
     {

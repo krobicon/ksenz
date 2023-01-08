@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 using Microsoft.Extensions.Configuration;
-using Tanya.Core.Extensions;
+using ksenz.Core.Extensions;
 
-namespace Tanya.Game.Apex.Feature.Aim
+namespace ksenz.Game.Apex.Feature.Aim
 {
     public class Config
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
-using Tanya;
+using ksenz;
 
 await Host.CreateDefaultBuilder(args)
     .UseSystemd()

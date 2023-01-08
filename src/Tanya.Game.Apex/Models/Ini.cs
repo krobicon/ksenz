@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Tanya.Game.Apex.Models
+namespace ksenz.Game.Apex.Models
 {
     public class Ini
     {

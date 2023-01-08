@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Tanya.Game.Apex.Core.Interfaces;
-using Tanya.Game.Apex.Models;
+using ksenz.Game.Apex.Core.Interfaces;
+using ksenz.Game.Apex.Models;
 
-namespace Tanya.Game.Apex.Services
+namespace ksenz.Game.Apex.Services
 {
     public class DataService : IDisposable, IHostedService
     {

@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
-using Tanya.Driver.Linux;
-using Tanya.Game.Apex;
-using Tanya.Logging;
+using ksenz.Driver.Linux;
+using ksenz.Game.Apex;
+using ksenz.Logging;
 
-namespace Tanya
+namespace ksenz
 {
     public static class Startup
     {

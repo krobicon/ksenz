@@ -1,4 +1,4 @@
-﻿namespace Tanya.Driver.Interfaces
+﻿namespace ksenz.Driver.Interfaces
 {
     public interface IDriver
     {

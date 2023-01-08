@@ -4,7 +4,7 @@ rm -rf "bin"
 # ====================
 # 
 # ====================
-dotnet publish "src/popos/popos.csproj" --no-self-contained --output "bin" --runtime linux-x64 \
+dotnet publish "src/ksenz/ksenz.csproj" --no-self-contained --output "bin" --runtime linux-x64 \
   "-p:Configuration=Release" \
   "-p:DebugType=None" \
   "-p:GenerateRuntimeConfigurationFiles=true" \
@@ -27,7 +27,7 @@ read -p "ServiceName: " serviceName
 # 
 # ====================
 rootPath=\$(realpath .)
-execPath=\$(realpath "popos")
+execPath=\$(realpath "ksenz")
 servPath="/etc/systemd/system/\${serviceName}.service"
 
 # ====================

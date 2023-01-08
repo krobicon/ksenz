@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using Tanya.Driver.Interfaces;
+using ksenz.Driver.Interfaces;
 
-namespace Tanya.Game.Apex.Core
+namespace ksenz.Game.Apex.Core
 {
     public abstract class Context : IDriver, ILogger
     {

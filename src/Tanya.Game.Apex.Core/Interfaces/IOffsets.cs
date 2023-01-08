@@ -1,4 +1,4 @@
-﻿namespace Tanya.Game.Apex.Core.Interfaces
+﻿namespace ksenz.Game.Apex.Core.Interfaces
 {
     public interface IOffsets
     {

@@ -1,4 +1,4 @@
-﻿namespace Tanya.Core.Interfaces
+﻿namespace ksenz.Core.Interfaces
 {
     public interface IType<T>
     {

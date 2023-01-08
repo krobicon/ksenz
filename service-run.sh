@@ -1,10 +1,10 @@
 #!/bin/bash
-serviceName="project-popos"
+serviceName="project-ksenz"
 
 # ====================
 # 
 # ====================
-dotnet publish "src/popos/popos.csproj" --output "bin" --runtime linux-x64 --self-contained \
+dotnet publish "src/ksenz/ksenz.csproj" --output "bin" --runtime linux-x64 --self-contained \
   "-p:Configuration=Release" \
   "-p:DebugType=None" \
   "-p:GenerateRuntimeConfigurationFiles=true" \
@@ -13,8 +13,8 @@ dotnet publish "src/popos/popos.csproj" --output "bin" --runtime linux-x64 --sel
 # ====================
 # 
 # ====================
-if [ $serviceName != "popos" ]; then
-  mv "bin/popos" "bin/${serviceName}"
+if [ $serviceName != "ksenz" ]; then
+  mv "bin/ksenz" "bin/${serviceName}"
 fi
 
 # ====================

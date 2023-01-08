@@ -1,10 +1,10 @@
 ﻿using System.Collections.Concurrent;
 using System.Text.Json.Serialization;
-using Tanya.Core;
-using Tanya.Driver.Interfaces;
-using Tanya.Game.Apex.Core.Interfaces;
+using ksenz.Core;
+using ksenz.Driver.Interfaces;
+using ksenz.Game.Apex.Core.Interfaces;
 
-namespace Tanya.Game.Apex.Core.Models
+namespace ksenz.Game.Apex.Core.Models
 {
     public abstract class EntityListFilter<T> : IUpdatable where T : IUpdatable
     {

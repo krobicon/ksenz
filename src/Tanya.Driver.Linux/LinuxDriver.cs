@@ -1,7 +1,7 @@
-﻿using Tanya.Driver.Interfaces;
-using Tanya.Driver.Linux.Interop;
+﻿using ksenz.Driver.Interfaces;
+using ksenz.Driver.Linux.Interop;
 
-namespace Tanya.Driver.Linux
+namespace ksenz.Driver.Linux
 {
     public class LinuxDriver : IDriver
     {

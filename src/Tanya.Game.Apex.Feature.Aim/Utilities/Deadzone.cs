@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Tanya.Core.Models;
+using ksenz.Core.Models;
 
-namespace Tanya.Game.Apex.Feature.Aim.Utilities
+namespace ksenz.Game.Apex.Feature.Aim.Utilities
 {
     public class Deadzone
     {

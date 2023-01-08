@@ -1,7 +1,7 @@
-﻿using Tanya.Core.Models;
-using Tanya.Game.Apex.Feature.Aim.Utilities;
+﻿using ksenz.Core.Models;
+using ksenz.Game.Apex.Feature.Aim.Utilities;
 
-namespace Tanya.Game.Apex.Feature.Aim.Extensions
+namespace ksenz.Game.Apex.Feature.Aim.Extensions
 {
     public static class ConfigExtensions
     {

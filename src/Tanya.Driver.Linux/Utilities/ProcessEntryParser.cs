@@ -1,6 +1,6 @@
-﻿using Tanya.Driver.Linux.Models;
+﻿using ksenz.Driver.Linux.Models;
 
-namespace Tanya.Driver.Linux.Utilities
+namespace ksenz.Driver.Linux.Utilities
 {
     public static class ProcessEntryParser
     {

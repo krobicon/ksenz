@@ -8,11 +8,11 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tanya.Core\Tanya.Core.csproj" />
-    <ProjectReference Include="..\Tanya.Driver\Tanya.Driver.csproj" />
-    <ProjectReference Include="..\Tanya.Driver.Linux\Tanya.Driver.Linux.csproj" />
-    <ProjectReference Include="..\Tanya.Game.Apex.Core\Tanya.Game.Apex.Core.csproj" />
-    <ProjectReference Include="..\Tanya.Game.Apex.Feature.Aim\Tanya.Game.Apex.Feature.Aim.csproj" />
-    <ProjectReference Include="..\Tanya.Game.Apex.Feature.Sense\Tanya.Game.Apex.Feature.Sense.csproj" />
+    <ProjectReference Include="..\ksenz.Core\ksenz.Core.csproj" />
+    <ProjectReference Include="..\ksenz.Driver\ksenz.Driver.csproj" />
+    <ProjectReference Include="..\ksenz.Driver.Linux\ksenz.Driver.Linux.csproj" />
+    <ProjectReference Include="..\ksenz.Game.Apex.Core\ksenz.Game.Apex.Core.csproj" />
+    <ProjectReference Include="..\ksenz.Game.Apex.Feature.Aim\ksenz.Game.Apex.Feature.Aim.csproj" />
+    <ProjectReference Include="..\ksenz.Game.Apex.Feature.Sense\ksenz.Game.Apex.Feature.Sense.csproj" />
   </ItemGroup>
 </Project>

@@ -1,14 +1,14 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Tanya.Core.Models;
-using Tanya.Game.Apex.Core;
-using Tanya.Game.Apex.Core.Interfaces;
-using Tanya.Game.Apex.Core.Models;
-using Tanya.Game.Apex.Feature.Aim.Enums;
-using Tanya.Game.Apex.Feature.Aim.Extensions;
-using Tanya.Game.Apex.Feature.Aim.Interfaces;
-using Tanya.Game.Apex.Feature.Aim.Utilities;
+using ksenz.Core.Models;
+using ksenz.Game.Apex.Core;
+using ksenz.Game.Apex.Core.Interfaces;
+using ksenz.Game.Apex.Core.Models;
+using ksenz.Game.Apex.Feature.Aim.Enums;
+using ksenz.Game.Apex.Feature.Aim.Extensions;
+using ksenz.Game.Apex.Feature.Aim.Interfaces;
+using ksenz.Game.Apex.Feature.Aim.Utilities;
 
-namespace Tanya.Game.Apex.Feature.Aim
+namespace ksenz.Game.Apex.Feature.Aim
 {
     public class Feature : IFeature
     {

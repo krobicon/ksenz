@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-using Tanya.Core.Interfaces;
+using ksenz.Core.Interfaces;
 
-namespace Tanya.Core.Types
+namespace ksenz.Core.Types
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class UInt32Type : IType<uint>

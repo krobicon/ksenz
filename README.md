@@ -1,6 +1,6 @@
-# Tanya
+# ksenz
 
-"Victory. Such a tempting thing. Naturally, everyone wants to savor a taste." - Tanya von Degurechaff
+"Victory. Such a tempting thing. Naturally, everyone wants to savor a taste." - ksenz von Degurechaff
 
 # Installation
 
@@ -20,7 +20,7 @@ See [this page for more information](https://www.cyberciti.biz/faq/how-can-i-log
 
 ## (2) Enable Process Isolation
 
-We'll ensure that non-root users are unable to see the `project-tanya` service.
+We'll ensure that non-root users are unable to see the `project-ksenz` service.
 
 1. Switch to the `root` user:
 
@@ -98,7 +98,7 @@ See [this page for more information](https://www.kernel.org/doc/Documentation/se
 
 ## (4) Install .NET
 
-We'll ensure that `project-tanya` can be compiled with *.NET*.
+We'll ensure that `project-ksenz` can be compiled with *.NET*.
 
 1. Switch to the `root` user:
 
@@ -119,7 +119,7 @@ apt update && apt install -y dotnet-sdk-6.0
 
 ## (5) Build Service
 
-We'll build `project-tanya`, so we can register it as a service:
+We'll build `project-ksenz`, so we can register it as a service:
 
 1. Switch to `root` user:
 
@@ -142,13 +142,13 @@ apt install -y git
 4. Clone this repository:
 
 ```
-git clone https://github.com/XRadius/project-tanya
+git clone https://github.com/XRadius/project-ksenz
 ```
 
-5. Open the `project-tanya` directory:
+5. Open the `project-ksenz` directory:
 
 ```
-cd ~/project-tanya
+cd ~/project-ksenz
 ```
 
 6. Enable execution of the *build script*:
@@ -165,12 +165,12 @@ chmod +x service-build.sh
 
 ## (6) Install Service
 
-We'll install `project-tanya` as a service:
+We'll install `project-ksenz` as a service:
 
 1. Open the `bin` directory:
 
 ```
-cd ~/project-tanya/bin
+cd ~/project-ksenz/bin
 ```
 
 2. Run the *installation script* and follow the instructions:
@@ -179,4 +179,4 @@ cd ~/project-tanya/bin
 ./service-install.sh
 ```
 
-Once you've followed these instructions, `project-tanya` is ready for use!
+Once you've followed these instructions, `project-ksenz` is ready for use!

@@ -1,7 +1,7 @@
-﻿using Tanya.Driver.Linux.Models;
-using Tanya.Driver.Linux.Utilities;
+﻿using ksenz.Driver.Linux.Models;
+using ksenz.Driver.Linux.Utilities;
 
-namespace Tanya.Driver.Linux
+namespace ksenz.Driver.Linux
 {
     public class Linux
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Tanya.Game.Apex.Services;
+using ksenz.Game.Apex.Services;
 
-namespace Tanya.Game.Apex
+namespace ksenz.Game.Apex
 {
     public static class Bootstrap
     {

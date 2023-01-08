@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
-namespace Tanya.Core.Models
+namespace ksenz.Core.Models
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public record Vector
