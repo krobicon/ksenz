@@ -1,7 +1,7 @@
-﻿using Tanya.Core.Interfaces;
-using Tanya.Driver.Interfaces;
+﻿using popos.Core.Interfaces;
+using popos.Driver.Interfaces;
 
-namespace Tanya.Core.Extensions
+namespace popos.Core.Extensions
 {
     public static class DriverExtensions
     {
