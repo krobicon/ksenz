@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Configuration;
 
-namespace popos.Core.Extensions
+namespace Tanya.Core.Extensions
 {
     public static class ConfigurationExtensions
     {
