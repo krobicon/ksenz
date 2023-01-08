@@ -1,10 +1,10 @@
 {
   "version": "0.2.0",
   "configurations": [{
-    "cwd": "${workspaceFolder}/src/Tanya/bin/Debug/net6.0",
+    "cwd": "${workspaceFolder}/src/popos/bin/Debug/net6.0",
     "name": "launch",
     "preLaunchTask": "build",
-    "program": "${workspaceFolder}/src/Tanya/bin/Debug/net6.0/Tanya.dll",
+    "program": "${workspaceFolder}/src/popos/bin/Debug/net6.0/popos.dll",
     "request": "launch",
     "type": "coreclr"
   }]
