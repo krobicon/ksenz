@@ -49,7 +49,7 @@ namespace ksenz.Game.Apex.Feature.Aim
                 var deltaY = MathF.Abs(localPlayer.ViewAngle.Y - desiredAngle.Y);
                 if (state.Buttons.InZoom != 0)
                 {
-                    if ((deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
+                    if (deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
                 }
                 else if (deltaX >= _config.PitchAngle || deltaY >= _config.YawAngle) continue;
                 var targetScore = deltaX + deltaY + (target.BleedoutState != 0 ? 1000 : 0);
