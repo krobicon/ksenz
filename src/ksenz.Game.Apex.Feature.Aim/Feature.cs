@@ -47,7 +47,11 @@ namespace ksenz.Game.Apex.Feature.Aim
                 var desiredAngle = AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(target));
                 var deltaX = MathF.Abs(localPlayer.ViewAngle.X - desiredAngle.X);
                 var deltaY = MathF.Abs(localPlayer.ViewAngle.Y - desiredAngle.Y);
-                if (deltaX >= _config.PitchAngle || deltaY >= _config.YawAngle) continue;
+                if (state.Buttons.InZoom != 0)
+                {
+                    if ((deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
+                }
+                else if (deltaX >= _config.PitchAngle || deltaY >= _config.YawAngle) continue;
                 var targetScore = deltaX + deltaY + (target.BleedoutState != 0 ? 1000 : 0);
 
                 // Prioritize the target.
