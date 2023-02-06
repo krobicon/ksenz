@@ -19,10 +19,15 @@ namespace ksenz.Game.Apex.Feature.Aim.Extensions
 
             if (state.Buttons.InAttack != 0 && (state.Buttons.InZoom != 0 || localPlayer.VecPunchWeaponAngle.X != 0 || localPlayer.VecPunchWeaponAngle.Y != 0))
             {
-                return state.Buttons.InWalk != 0 ? TargetType.All : TargetType.Enemy;
+                return TargetType.Enemy;
+                //return state.Buttons.InWalk != 0 ? TargetType.All : TargetType.Enemy;
             }
 
-            if (state.Buttons.InZoom != 0)
+            if (state.Buttons.InZoom != 0 && state.Buttons.InWalk != 0)
+            {
+                return TargetType.None;
+            }
+            else if (state.Buttons.InZoom != 0)
             {
                 return TargetType.Enemy;
             }
