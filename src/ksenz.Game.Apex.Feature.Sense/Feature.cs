@@ -29,7 +29,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                         if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
                         {
                             player.GlowEnable = (byte)(player.Visible ? 5 : 7);
-                            if (_config.Distance != 1)
+                            if (_config.Distance != 333)
                             {
                                 player.GlowThroughWalls = (byte)(player.Visible ? 1 : 2);
                             }
@@ -37,7 +37,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                         else if (player.GlowEnable is 5 or 7)
                         {
                             player.GlowEnable = 2;
-                            if (_config.Distance != 1)
+                            if (_config.Distance != 333)
                             {
                                 player.GlowThroughWalls = 5;
                             }
