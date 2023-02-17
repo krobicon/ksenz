@@ -24,13 +24,14 @@ namespace ksenz.Game.Apex.Feature.Sense
             {
                 foreach (var (_, player) in state.Players)
                 {
-                    if (player.IsValid() && !player.IsSameTeam(localPlayer))
-                    {
-                        if (_config.Distance == 1)
+                    if (_config.Distance == 1 && !player.IsSameTeam(localPlayer))
                         {
                             player.GlowEnable = (byte)(5);
                         }
-                        else if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
+                
+                    else if (player.IsValid() && !player.IsSameTeam(localPlayer))
+                    {
+                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
                         {
                             player.GlowEnable = (byte)(player.Visible ? 5 : 7);
                             player.GlowThroughWalls = (byte)(player.Visible ? 1 : 2);
