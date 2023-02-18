@@ -49,9 +49,9 @@ namespace ksenz.Game.Apex.Feature.Aim
                 var deltaY = MathF.Abs(localPlayer.ViewAngle.Y - desiredAngle.Y);
                 if (state.Buttons.InZoom != 0)
                 {
-                    if (distance >= 100)
+                    if (distance >= 70)
                     {
-                        if (deltaX >= (_config.PitchAngle / 3) || deltaY >= (_config.YawAngle / 3)) continue;
+                        if (deltaX >= (_config.PitchAngle / 4) || deltaY >= (_config.YawAngle / 4)) continue;
                     }
                     else if (deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
                 }
