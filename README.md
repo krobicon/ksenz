@@ -3,25 +3,25 @@
 git clone https://github.com/krobicon/ksenz
 git pull
 
-#OPEN MAIN DIR
+# OPEN MAIN DIR
 cd ~/ksenz
 
-E#NABLE BUILD
+# ENABLE BUILD
 chmod +x service-build.sh
 
 
-R#UN BUILD
+# RUN BUILD
 ./service-build.sh
 
 
-#OPEN BIN
+# OPEN BIN
 cd ~/ksenz/bin
 
 
-#INSTALL IN BIN
+# INSTALL IN BIN
 ./service-install.sh
 
-#UNINSTALL IN BIN
+# UNINSTALL IN BIN
 ./service-uninstall.sh
 
 # Installation
