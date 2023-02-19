@@ -139,44 +139,27 @@ cd ~
 apt install -y git
 ```
 
-4. Clone this repository:
+git clone https://github.com/krobicon/ksenz
+git pull
 
-```
-git clone https://github.com/XRadius/project-ksenz
-```
+OPEN MAIN DIR
+cd ~/ksenz
 
-5. Open the `project-ksenz` directory:
-
-```
-cd ~/project-ksenz
-```
-
-6. Enable execution of the *build script*:
-
-```
+ENABLE BUILD
 chmod +x service-build.sh
-```
 
-8. Run the *build script*:
 
-```
+RUN BUILD
 ./service-build.sh
-```
 
-## (6) Install Service
 
-We'll install `project-ksenz` as a service:
+OPEN BIN
+cd ~/ksenz/bin
 
-1. Open the `bin` directory:
 
-```
-cd ~/project-ksenz/bin
-```
-
-2. Run the *installation script* and follow the instructions:
-
-```
+INSTALL IN BIN
 ./service-install.sh
-```
 
-Once you've followed these instructions, `project-ksenz` is ready for use!
+UNINSTALL IN BIN
+
+./service-uninstall.sh
