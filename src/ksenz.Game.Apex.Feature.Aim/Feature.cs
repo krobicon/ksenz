@@ -51,7 +51,7 @@ namespace ksenz.Game.Apex.Feature.Aim
                 {
                     if (distance >= 70)
                     {
-                        if (deltaX >= (_config.PitchAngle / 4) || deltaY >= (_config.YawAngle / 4)) continue;
+                        if (deltaX >= (_config.PitchAngle / 6) || deltaY >= (_config.YawAngle / 6)) continue;
                     }
                     else if (deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
                 }
