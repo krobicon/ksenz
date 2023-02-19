@@ -1,6 +1,28 @@
 # ksenz
 
-"Victory. Such a tempting thing. Naturally, everyone wants to savor a taste." - ksenz von Degurechaff
+git clone https://github.com/krobicon/ksenz
+git pull
+
+#OPEN MAIN DIR
+cd ~/ksenz
+
+E#NABLE BUILD
+chmod +x service-build.sh
+
+
+R#UN BUILD
+./service-build.sh
+
+
+#OPEN BIN
+cd ~/ksenz/bin
+
+
+#INSTALL IN BIN
+./service-install.sh
+
+#UNINSTALL IN BIN
+./service-uninstall.sh
 
 # Installation
 
@@ -139,27 +161,4 @@ cd ~
 apt install -y git
 ```
 
-git clone https://github.com/krobicon/ksenz
-git pull
 
-OPEN MAIN DIR
-cd ~/ksenz
-
-ENABLE BUILD
-chmod +x service-build.sh
-
-
-RUN BUILD
-./service-build.sh
-
-
-OPEN BIN
-cd ~/ksenz/bin
-
-
-INSTALL IN BIN
-./service-install.sh
-
-UNINSTALL IN BIN
-
-./service-uninstall.sh
