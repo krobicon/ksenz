@@ -148,7 +148,7 @@ namespace ksenz.Game.Apex.Feature.Aim
                     _targetPreviousTicks = frameTime.Ticks;
                     _targetPreviousVecPunchWeaponAngle = localPlayer.VecPunchWeaponAngle;
                 }
-                else if (MathF.Abs(localPlayer.ViewAngle.X - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).X) >= (_config.PitchAngle * 10/(localPlayer.LocalOrigin.Distance2(target.LocalOrigin) * Constants.UnitToMeter)) || MathF.Abs(localPlayer.ViewAngle.Y - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).Y) >= (_config.YawAngle * 10/(localPlayer.LocalOrigin.Distance2(target.LocalOrigin) * Constants.UnitToMeter)))
+                else if (MathF.Abs(localPlayer.ViewAngle.X - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).X) >= (_config.PitchAngle * 10/(localPlayer.LocalOrigin.Distance2(_target.LocalOrigin) * Constants.UnitToMeter)) || MathF.Abs(localPlayer.ViewAngle.Y - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).Y) >= (_config.YawAngle * 10/(localPlayer.LocalOrigin.Distance2(_target.LocalOrigin) * Constants.UnitToMeter)))
                 {
                     var target = Find(state, localPlayer, targetType == TargetType.All);
                     if (target == null) return;
