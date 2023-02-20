@@ -40,21 +40,25 @@ namespace ksenz.Game.Apex.Feature.Aim
             foreach (var target in state.IterateTargets().Where(x => x.IsValid(localPlayer) && x.Visible))
             {
                 // Calculate the distance.
-                var distance = localPlayer.LocalOrigin.Distance2(target.LocalOrigin) * Constants.UnitToMeter;
+                float distance = localPlayer.LocalOrigin.Distance2(target.LocalOrigin) * Constants.UnitToMeter;
                 if (distance >= _config.Distance) continue;
 
                 // Calculate the view angle delta.
                 var desiredAngle = AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(target));
                 var deltaX = MathF.Abs(localPlayer.ViewAngle.X - desiredAngle.X);
                 var deltaY = MathF.Abs(localPlayer.ViewAngle.Y - desiredAngle.Y);
-                if (state.Buttons.InZoom != 0)
+                if (distance >= 10)
+                    {
+                        if (deltaX >= (_config.PitchAngle * 10/distance)  || deltaY >= (_config.YawAngle * 10/distance)) continue;
+                    }
+                /*if (state.Buttons.InZoom != 0)
                 {
                     if (distance >= 60)
                     {
                         if (deltaX >= (_config.PitchAngle / 5) || deltaY >= (_config.YawAngle / 10)) continue;
                     }
                     else if (deltaX >= (_config.PitchAngle / 2) || deltaY >= (_config.YawAngle / 2)) continue;
-                }
+                }*/
                 else if (deltaX >= _config.PitchAngle || deltaY >= _config.YawAngle) continue;
                 var targetScore = deltaX + deltaY + (target.BleedoutState != 0 ? 1000 : 0);
 
@@ -144,7 +148,17 @@ namespace ksenz.Game.Apex.Feature.Aim
                     _targetPreviousTicks = frameTime.Ticks;
                     _targetPreviousVecPunchWeaponAngle = localPlayer.VecPunchWeaponAngle;
                 }
-                else if ((state.Buttons.InZoom != 0 && (localPlayer.LocalOrigin.Distance2(_targetPreviousOrigin) * Constants.UnitToMeter) >= 60) && (MathF.Abs(localPlayer.ViewAngle.X - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).X) >= (_config.PitchAngle/5) || MathF.Abs(localPlayer.ViewAngle.Y - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).Y) >= (_config.YawAngle/10)))
+                else if ((MathF.Abs(localPlayer.ViewAngle.X - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).X) >= (_config.Pitchangle / ((localPlayer.LocalOrigin.Distance2(_targetPreviousOrigin) * Constants.UnitToMeter)/10)) || MathF.Abs(localPlayer.ViewAngle.Y - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).Y) >= (_config.Yawangle / ((localPlayer.LocalOrigin.Distance2(_targetPreviousOrigin) * Constants.UnitToMeter)/10)))
+                {
+                    var target = Find(state, localPlayer, targetType == TargetType.All);
+                    if (target == null) return;
+                    _target = target;
+                    _targetLockTicks = frameTime.Ticks;
+                    _targetPreviousOrigin = target.LocalOrigin;
+                    _targetPreviousTicks = frameTime.Ticks;
+                    _targetPreviousVecPunchWeaponAngle = localPlayer.VecPunchWeaponAngle;
+                }
+                /*else if ((state.Buttons.InZoom != 0 && (localPlayer.LocalOrigin.Distance2(_targetPreviousOrigin) * Constants.UnitToMeter) >= 60) && (MathF.Abs(localPlayer.ViewAngle.X - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).X) >= (_config.PitchAngle/5) || MathF.Abs(localPlayer.ViewAngle.Y - AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(_target)).Y) >= (_config.YawAngle/10)))
                 {
                     var target = Find(state, localPlayer, targetType == TargetType.All);
                     if (target == null) return;
@@ -163,7 +177,7 @@ namespace ksenz.Game.Apex.Feature.Aim
                     _targetPreviousOrigin = target.LocalOrigin;
                     _targetPreviousTicks = frameTime.Ticks;
                     _targetPreviousVecPunchWeaponAngle = localPlayer.VecPunchWeaponAngle;
-                }
+                }*/
                 else if (!Validate(localPlayer, _target, _targetPreviousOrigin))
                 {
                     if (_targetPreviousTicks + _config.ReleaseTime * TimeSpan.TicksPerMillisecond >= frameTime.Ticks) return;
