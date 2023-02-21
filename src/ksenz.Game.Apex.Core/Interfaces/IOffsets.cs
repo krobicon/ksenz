@@ -8,6 +8,9 @@
         uint ButtonInSpeed { get; }
         uint ButtonInWalk { get; }
         uint ButtonInZoom { get; }
+        uint ButtonInForwardDown1 { get; }
+        uint ButtonInForwardDown2 { get; }
+        uint ButtonInForwardState { get; }
         uint CoreEntityList { get; }
         uint CoreLevelName { get; }
         uint CoreLocalPlayer { get; }
@@ -23,6 +26,7 @@
         uint PlayerTeamNum { get; }
         uint PlayerVecPunchWeaponAngle { get; }
         uint PlayerViewAngle { get; }
+        uint PlayerFlags { get; }
 
         #endregion
     }
