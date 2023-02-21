@@ -51,11 +51,11 @@ namespace ksenz.Game.Apex.Feature.Sense
                     {
                         if (state.Buttons.InForwardState == 4)
                         {
-                            state.Buttons.InForwardState == 5;
+                            state.Buttons.InForwardState = 5;
                         }
                         else if (state.Buttons.InForwardState == 5)
                        {
-                            state.Buttons.InForwardState == 4;
+                            state.Buttons.InForwardState = 4;
                         }
                     }
                 }
