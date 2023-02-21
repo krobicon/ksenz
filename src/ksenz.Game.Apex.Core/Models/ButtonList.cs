@@ -13,9 +13,9 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _inSpeed;
         private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
-        private readonly Access<uint> _inForwardDown1;
-        private readonly Access<uint> _inForwardDown2;
-        private readonly Access<uint> _inForwardState;
+        private readonly Access<int> _inForwardDown1;
+        private readonly Access<int> _inForwardDown2;
+        private readonly Access<int> _inForwardState;
 
         #region Constructors
 
@@ -63,21 +63,21 @@ namespace ksenz.Game.Apex.Core.Models
         }
         
         [JsonPropertyName("inForwardDown1")]
-        public uint InForwardDown1
+        public int InForwardDown1
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardDown2")]
-        public uint InForwardDown2
+        public int InForwardDown2
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardState")]
-        public uint InForwardState
+        public int InForwardState
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
