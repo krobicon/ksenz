@@ -39,6 +39,7 @@ namespace ksenz.Game.Apex.Models
         public uint ButtonInSpeed => _ini.Get("Buttons", "in_speed");
         public uint ButtonInWalk => _ini.Get("Buttons", "in_walk");
         public uint ButtonInZoom => _ini.Get("Buttons", "in_zoom");
+        public uint ButtonInForward => _ini.Get("Buttons", "in_forward");
         public uint CoreEntityList => _ini.Get("Miscellaneous", "cl_entitylist");
         public uint CoreLevelName => _ini.Get("Miscellaneous", "LevelName");
         public uint CoreLocalPlayer => _ini.Get("Miscellaneous", "LocalPlayer") + 0x8;
@@ -54,6 +55,7 @@ namespace ksenz.Game.Apex.Models
         public uint PlayerTeamNum => _ini.Get("RecvTable.DT_BaseEntity", "m_iTeamNum");
         public uint PlayerVecPunchWeaponAngle => _ini.Get("DataMap.C_Player", "m_currentFrameLocalPlayer.m_vecPunchWeapon_Angle");
         public uint PlayerViewAngle => _ini.Get("DataMap.C_Player", "m_ammoPoolCapacity") - 0x14;
+        public uint PlayerFlags => _ini.Get("RecvTable.DT_Player", "m_fFlags");
 
         #endregion
     }
