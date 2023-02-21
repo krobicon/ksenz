@@ -22,6 +22,7 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _teamNum;
         private readonly Access<Vector> _vecPunchWeaponAngle;
         private readonly Access<Vector> _viewAngle;
+        private readonly Access<uint> _flags;
 
         #region Constructors
 
@@ -38,6 +39,7 @@ namespace ksenz.Game.Apex.Core.Models
             _teamNum = driver.Access(address + offsets.PlayerTeamNum, ByteType.Instance, 1000);
             _vecPunchWeaponAngle = driver.Access(address + offsets.PlayerVecPunchWeaponAngle, VectorType.Instance);
             _viewAngle = driver.Access(address + offsets.PlayerViewAngle, VectorType.Instance);
+            _flags = driver.Access(address + offsets.PlayerFlags, UInt32Type.Instance);
         }
 
         #endregion
@@ -52,6 +54,11 @@ namespace ksenz.Game.Apex.Core.Models
         public bool IsValid()
         {
             return GlowEnable != 0 && GlowEnable != 255 && LifeState == 0 && LocalOrigin != Vector.Origin && Name != 0;
+        }
+        
+        public bool IsGrounded()
+        {
+            return (Flags & 0x1) != 0;
         }
 
         #endregion
@@ -127,6 +134,13 @@ namespace ksenz.Game.Apex.Core.Models
             get => _viewAngle.Get();
             set => _viewAngle.Set(value);
         }
+        
+        [JsonPropertyName("flags")]
+        public uint Flags
+        {
+            get => _flags.Get();
+            set => _flags.Set(value);
+        }
 
         [JsonPropertyName("visible")]
         public bool Visible => _lastVisibleTime.Visible;
@@ -148,6 +162,7 @@ namespace ksenz.Game.Apex.Core.Models
             _teamNum.Update(frameTime);
             _vecPunchWeaponAngle.Update(frameTime);
             _viewAngle.Update(frameTime);
+            _flags.Update(frameTime);
         }
 
         #endregion
