@@ -13,7 +13,7 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _inSpeed;
         private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
-        private readonly Access<byte> _inForward;
+        private readonly Access<uint> _inForwardDown1;
 
         #region Constructors
 
@@ -23,7 +23,9 @@ namespace ksenz.Game.Apex.Core.Models
             _inSpeed = driver.Access(address + offsets.ButtonInSpeed, ByteType.Instance);
             _inWalk = driver.Access(address + offsets.ButtonInWalk, ByteType.Instance);
             _inZoom = driver.Access(address + offsets.ButtonInZoom, ByteType.Instance);
-            _inForward = driver.Access(address + offsets.ButtonInForward, ByteType.Instance);
+            _inForwardDown1 = driver.Access(address + offsets.ButtonInForwardDown1, UInt32Type.Instance);
+            _inForwardDown2 = driver.Access(address + offsets.ButtonInForwardDown2, UInt32Type.Instance);
+            _inForwardState = driver.Access(address + offsets.ButtonInForwardState, UInt32Type.Instance);
         }
 
         #endregion
@@ -58,11 +60,25 @@ namespace ksenz.Game.Apex.Core.Models
             set => _inZoom.Set(value);
         }
         
-        [JsonPropertyName("inForward")]
-        public byte InForward
+        [JsonPropertyName("inForwardDown1")]
+        public uint InForward
         {
-            get => _inForward.Get();
-            set => _inForward.Set(value);
+            get => _inForwardDown1.Get();
+            set => _inForwardDown1.Set(value);
+        }
+        
+        [JsonPropertyName("inForwardDown2")]
+        public uint InForward
+        {
+            get => _inForwardDown1.Get();
+            set => _inForwardDown1.Set(value);
+        }
+        
+        [JsonPropertyName("inForwardState")]
+        public uint InForward
+        {
+            get => _inForwardDown1.Get();
+            set => _inForwardDown1.Set(value);
         }
 
         #endregion
@@ -75,7 +91,9 @@ namespace ksenz.Game.Apex.Core.Models
             _inSpeed.Update(frameTime);
             _inWalk.Update(frameTime);
             _inZoom.Update(frameTime);
-            _inForward.Update(frameTime);
+            _inForwardDown1.Update(frameTime);
+            _inForwardDown2.Update(frameTime);
+            _inForwardState.Update(frameTime);
         }
 
         #endregion
