@@ -13,9 +13,9 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _inSpeed;
         private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
-        private readonly Access<int> _inForwardDown1;
-        private readonly Access<int> _inForwardDown2;
-        private readonly Access<int> _inForwardState;
+        private readonly Access<uint> _inForwardDown1;
+        private readonly Access<uint> _inForwardDown2;
+        private readonly Access<uint> _inForwardState;
 
         #region Constructors
 
