@@ -6,7 +6,10 @@ namespace ksenz.Game.Apex.Feature.Sense
     public class Feature : IFeature
     {
         private readonly Config _config;
-        private uint previousState;
+        private bool state;
+        private bool press;
+        private bool release;
+        private bool force;
 
         #region Constructors
 
@@ -45,10 +48,63 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
+                state = (state.Buttons.InForwardState & 1) != 0;
                 if (!localPlayer.IsGrounded())
                 {
-                    state.Buttons.InForwardState = 0;
+                    force = true;
+                    if (!release)
+                    {
+                        press = false;
+                        release = true;
+                    }
+                    else
+                    {
+                        release = false;
+                        press = true;
+                    }
                 }
+                else
+                {
+                    if (release && state.Buttons.InForwardDown1 != 0)
+                    {
+                        release = false;
+                        press = true;
+                    }
+                    else if (press && state.Buttons.InForwardDown1 != 0) 
+                    {
+                        force = false;
+                    }
+                    else if (press && state.Buttons.InForwardDown1 == 0) 
+                    {
+                        release = true;
+                        press = false;
+                    }
+                    else if(release && state.Buttons.InForwardDown1 == 0) 
+                    {
+                        force = false;
+                    }
+                }
+                if (force)
+                {
+                    int st;
+                    if (press && !release) 
+                    {
+			            st = 5;
+		            }
+                    else if (!press && release) 
+                    {
+			            st = 4;
+		            }
+                    else 
+                    {
+			            st = state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0 ? 4 : 5;
+		            }
+                    if (state.Buttons.InForwardState != st) 
+                    {
+			            state.Buttons.InForwardState = st;
+		            }
+                }
+                
                     /*if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
                     {
                         if (previousState != 5)
