@@ -27,7 +27,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                 {
                     if (player.IsValid() && !player.IsSameTeam(localPlayer))
                     {
-                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance && state.Buttons.InForwardState == 0)
+                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance && state.Buttons.InForwardState == 5)
                         {
                             player.GlowEnable = (byte)(player.Visible ? 5 : 7);
                             if (_config.Distance != 333)
@@ -49,7 +49,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                 {
                     if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
                     {
-                        if (state.Buttons.InForwardState == 4)
+                        if (state.Buttons.InForwardState == 0)
                         {
                             state.Buttons.InForwardState = 5;
                         }
