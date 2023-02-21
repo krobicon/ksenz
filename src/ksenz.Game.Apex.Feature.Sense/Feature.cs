@@ -97,7 +97,7 @@ namespace ksenz.Game.Apex.Feature.Sense
 		            }
                     else 
                     {
-		    	if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2)
+		    	if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
 			{
 				st = 4;
 			}
