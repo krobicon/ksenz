@@ -47,7 +47,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                 }
                 if (!localPlayer.IsGrounded())
                 {
-                    state.Buttons.InForwardState = 4;
+                    state.Buttons.InForwardState = 0;
                 }
                     /*if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
                     {
