@@ -58,7 +58,6 @@ namespace ksenz.Game.Apex.Feature.Sense
                             previousState = 4;
                         }
                     }*/
-                }
             }
         }
 
