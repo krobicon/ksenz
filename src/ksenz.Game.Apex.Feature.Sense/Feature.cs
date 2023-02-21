@@ -6,6 +6,7 @@ namespace ksenz.Game.Apex.Feature.Sense
     public class Feature : IFeature
     {
         private readonly Config _config;
+        private uint previousState;
 
         #region Constructors
 
@@ -44,9 +45,21 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                if (localPlayer.IsGrounded())
+                if (!localPlayer.IsGrounded())
                 {
-                    state.Buttons.InForwardState = 5;
+                    if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
+                    {
+                        if (previousState != 5)
+                        {
+                            state.Buttons.InForwardState = 5;
+                            previousState = 5;
+                        }
+                        else
+                        {
+                            state.Buttons.InForwardState = 4;
+                            previousState = 4;
+                        }
+                    }
                 }
             }
         }
