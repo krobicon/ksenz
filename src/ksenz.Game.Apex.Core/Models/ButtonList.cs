@@ -13,9 +13,9 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _inSpeed;
         private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
-        private readonly Access<uint> _inForwardDown1;
-        private readonly Access<uint> _inForwardDown2;
-        private readonly Access<uint> _inForwardState;
+        private readonly Access<byte> _inForwardDown1;
+        private readonly Access<byte> _inForwardDown2;
+        private readonly Access<byte> _inForwardState;
 
         #region Constructors
 
@@ -25,9 +25,9 @@ namespace ksenz.Game.Apex.Core.Models
             _inSpeed = driver.Access(address + offsets.ButtonInSpeed, ByteType.Instance);
             _inWalk = driver.Access(address + offsets.ButtonInWalk, ByteType.Instance);
             _inZoom = driver.Access(address + offsets.ButtonInZoom, ByteType.Instance);
-            _inForwardDown1 = driver.Access(address + offsets.ButtonInForwardDown1, UInt32Type.Instance);
-            _inForwardDown2 = driver.Access(address + offsets.ButtonInForwardDown2, UInt32Type.Instance);
-            _inForwardState = driver.Access(address + offsets.ButtonInForwardState, UInt32Type.Instance);
+            _inForwardDown1 = driver.Access(address + offsets.ButtonInForwardDown1, ByteType.Instance);
+            _inForwardDown2 = driver.Access(address + offsets.ButtonInForwardDown2, ByteType.Instance);
+            _inForwardState = driver.Access(address + offsets.ButtonInForwardState, ByteType.Instance);
         }
 
         #endregion
@@ -63,21 +63,21 @@ namespace ksenz.Game.Apex.Core.Models
         }
         
         [JsonPropertyName("inForwardDown1")]
-        public uint InForwardDown1
+        public byte InForwardDown1
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardDown2")]
-        public uint InForwardDown2
+        public byte InForwardDown2
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardState")]
-        public uint InForwardState
+        public byte InForwardState
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
