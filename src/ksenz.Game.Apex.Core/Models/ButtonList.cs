@@ -13,6 +13,7 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<byte> _inSpeed;
         private readonly Access<byte> _inWalk;
         private readonly Access<byte> _inZoom;
+        private readonly Access<byte> _inForward;
 
         #region Constructors
 
@@ -22,6 +23,7 @@ namespace ksenz.Game.Apex.Core.Models
             _inSpeed = driver.Access(address + offsets.ButtonInSpeed, ByteType.Instance);
             _inWalk = driver.Access(address + offsets.ButtonInWalk, ByteType.Instance);
             _inZoom = driver.Access(address + offsets.ButtonInZoom, ByteType.Instance);
+            _inForward = driver.Access(address + offsets.ButtonInForward, ByteType.Instance);
         }
 
         #endregion
@@ -55,6 +57,13 @@ namespace ksenz.Game.Apex.Core.Models
             get => _inZoom.Get();
             set => _inZoom.Set(value);
         }
+        
+        [JsonPropertyName("inForward")]
+        public byte InForward
+        {
+            get => _inForward.Get();
+            set => _inForward.Set(value);
+        }
 
         #endregion
 
@@ -66,6 +75,7 @@ namespace ksenz.Game.Apex.Core.Models
             _inSpeed.Update(frameTime);
             _inWalk.Update(frameTime);
             _inZoom.Update(frameTime);
+            _inForward.Update(frameTime);
         }
 
         #endregion
