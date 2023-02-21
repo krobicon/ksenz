@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 using ksenz.Core;
 using ksenz.Core.Extensions;
 using ksenz.Core.Types;
@@ -63,21 +63,21 @@ namespace ksenz.Game.Apex.Core.Models
         }
         
         [JsonPropertyName("inForwardDown1")]
-        public int InForwardDown1
+        public uint InForwardDown1
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardDown2")]
-        public int InForwardDown2
+        public uint InForwardDown2
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardState")]
-        public int InForwardState
+        public uint InForwardState
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
