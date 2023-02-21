@@ -106,7 +106,7 @@ namespace ksenz.Game.Apex.Feature.Sense
 				st = 5;
 			}
 		    }
-                    if (state.Buttons.InForwardState != st) 
+                    if (status != st) 
                     {
 			            state.Buttons.InForwardState = st;
 		            }
