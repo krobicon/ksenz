@@ -61,21 +61,21 @@ namespace ksenz.Game.Apex.Core.Models
         }
         
         [JsonPropertyName("inForwardDown1")]
-        public uint InForward
+        public uint InForwardDown1
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardDown2")]
-        public uint InForward
+        public uint InForwardDown2
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
         }
         
         [JsonPropertyName("inForwardState")]
-        public uint InForward
+        public uint InForwardState
         {
             get => _inForwardDown1.Get();
             set => _inForwardDown1.Set(value);
