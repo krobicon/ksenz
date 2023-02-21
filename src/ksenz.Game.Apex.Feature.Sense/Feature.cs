@@ -86,7 +86,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                 }
                 if (force)
                 {
-                    int st;
+                    uint st;
                     if (press && !release) 
                     {
 			            st = 5;
