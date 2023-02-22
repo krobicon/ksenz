@@ -54,11 +54,15 @@ namespace ksenz.Game.Apex.Feature.Sense
                     {
                         release = true;
                         state.Buttons.InForwardState = 33;
+                        state.Buttons.InForwardDown1 = 33;
+                        state.Buttons.InForwardDown2 = 33;
                     }
                     else
                     {
                         release = false;
                         state.Buttons.InForwardState = 0;
+                        state.Buttons.InForwardDown1 = 0;
+                        state.Buttons.InForwardDown2 = 0;
                     }
                 }
 
