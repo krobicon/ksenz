@@ -49,6 +49,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                     }
                 }
                 status = (state.Buttons.InForwardState & 1) != 0;
+		Console.WriteLine(status);
                 if (!localPlayer.IsGrounded())
                 {
                     force = true;
