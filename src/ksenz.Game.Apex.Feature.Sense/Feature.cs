@@ -108,7 +108,7 @@ namespace ksenz.Game.Apex.Feature.Sense
 		    }
                     if (state.Buttons.InForwardState != st) 
                     {
-			            state.Buttons.InForwardState = st;
+			            state.Buttons.InForwardState = (byte)st;
 		            }
                 }
                 
