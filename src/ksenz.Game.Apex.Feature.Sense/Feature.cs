@@ -48,7 +48,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                /*status = (state.Buttons.InForwardState & 1) != 0;
+                status = (state.Buttons.InForwardState & 1) != 0;
 		Console.WriteLine(status);
                 if (!localPlayer.IsGrounded())
                 {
@@ -90,21 +90,21 @@ namespace ksenz.Game.Apex.Feature.Sense
                     int st;
                     if (press && !release) 
                     {
-			            st = 5;
+			            st = 33;
 		            }
                     else if (!press && release) 
                     {
-			            st = 4;
+			            st = 0;
 		            }
                     else 
                     {
 		    	if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
 			{
-				st = 4;
+				st = 0;
 			}
 			else 
 			{
-				st = 5;
+				st = 33;
 			}
 		    }
                     if (state.Buttons.InForwardState != st) 
