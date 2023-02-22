@@ -30,7 +30,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                 {
                     if (player.IsValid() && !player.IsSameTeam(localPlayer))
                     {
-                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance && (state.Buttons.InForwardDown1 == 33))
+                        if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
                         {
                             player.GlowEnable = (byte)(player.Visible ? 5 : 7);
                             if (_config.Distance != 333)
@@ -48,20 +48,6 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                if (!localPlayer.IsGrounded())
-                {
-                    if (release == false)
-                    {
-                        release = true;
-                        state.Buttons.InForwardState = 33;
-                    }
-                    else
-                    {
-                        release = false;
-                        state.Buttons.InForwardState = 0;
-                    }
-                }
-
             }
         }
 
