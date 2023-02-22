@@ -51,7 +51,15 @@ namespace ksenz.Game.Apex.Feature.Sense
                 Int32 in_state;
                 if (!localPlayer.IsGrounded())
                 {
-                    in_state = (state.Buttons.InForwardState & 1) != 0;
+                    bool check = (state.Buttons.InForwardState & 1) != 0;
+                    if (check == 1)
+                    {
+                        in_state = 1;
+                    }
+                    else if (check == 0)
+                    {
+                        in_state = 0;
+                    }
                 }
                 else
                 {
