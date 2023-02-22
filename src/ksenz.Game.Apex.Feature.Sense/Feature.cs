@@ -48,8 +48,21 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                status = (state.Buttons.InForwardState & 1) != 0;
-		Console.WriteLine(status);
+		if (!localPlayer.IsGrounded())
+		{
+			if (state.Buttons.InForwardDown1 == 0 && state.Buttons.InForwardDown2 == 0)
+			{
+				if (state.Buttons.InForwardState == 33)
+				{
+					state.Buttons.InForwardState = 0;
+				}
+				else if (state.Buttons.InForwardState == 0)
+				{
+					state.Buttons.InForwardState = 33;
+				}
+			}
+		}
+                /*status = (state.Buttons.InForwardState & 1) != 0;
                 if (!localPlayer.IsGrounded())
                 {
                     force = true;
