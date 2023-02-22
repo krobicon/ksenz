@@ -48,15 +48,20 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                //status = (state.Buttons.InForwardState & 1) != 0;
+                Int32 in_state;
                 if (!localPlayer.IsGrounded())
                 {
-                    state.Buttons.InForwardDown1 = 33;
+                    in_state = !(state.Buttons.InForwardState & 1);
                 }
                 else
                 {
-                    state.Buttons.InForwardDown1 = 0;
+                    if ( (state.Buttons.InForwardState & 1) == 0 && state.Buttons.InForwardDown1 != 0 ) { in_state = 1; }
+                    if ( (state.Buttons.InForwardState & 1) == 1 && state.Buttons.InForwardDown1 != 0 ) { in_state = 0; }
+                    if ( (state.Buttons.InForwardState & 1) == 1 && state.Buttons.InForwardDown1 == 0 ) { in_state = 0; }
+                    if ( (state.Buttons.InForwardState & 1) == 0 && state.Buttons.InForwardDown1 == 0 ) { in_state = 0; }
                 }
+                if ( state.Buttons.InForwardDown1 != 0 ) { in_state = 1; }
+                state.Buttons.InForwardState = (byte)in_state;
             }
         }
 
