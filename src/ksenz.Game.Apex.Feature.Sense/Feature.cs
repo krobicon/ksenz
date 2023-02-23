@@ -1,7 +1,7 @@
 ﻿using ksenz.Game.Apex.Core;
 using ksenz.Game.Apex.Core.Interfaces;
-using Tanya.Game.Apex.Core.Models;
-using Tanya.Core.Models;
+using ksenz.Game.Apex.Core.Models;
+using ksenz.Core.Models;
 
 namespace ksenz.Game.Apex.Feature.Sense
 {
