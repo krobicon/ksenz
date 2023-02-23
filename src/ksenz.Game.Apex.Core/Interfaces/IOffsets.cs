@@ -24,6 +24,7 @@
         uint PlayerViewAngle { get; }
         uint PlayerFlags { get; }
         uint PlayerGlowColor { get; }
+        uint PlayerShield { get; }
 
         #endregion
     }
