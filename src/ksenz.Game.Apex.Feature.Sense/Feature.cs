@@ -28,19 +28,21 @@ namespace ksenz.Game.Apex.Feature.Sense
                     {
                         if (localPlayer.LocalOrigin.Distance2(player.LocalOrigin) * Constants.UnitToMeter < _config.Distance)
                         {
-                            player.GlowEnable = (byte)(player.Visible ? 5 : 7);
-                            if (_config.Distance != 333)
+                            player.GlowEnable = (byte)(1);
+                            player.GlowColor = (player.Visible? new Vector(10.0f, 0.0f, 0.0f) : new Vector(0.0f, 11.0f, 15.0f));
+                            /*if (_config.Distance != 333)
                             {
                                 player.GlowThroughWalls = (byte)(player.Visible ? 1 : 2);
-                            }
+                            }*/
                         }
                         else if (player.GlowEnable is 5 or 7)
                         {
                             player.GlowEnable = 2;
-                            if (_config.Distance != 333)
+                            player.GlowThroughWalls = 5;
+                            /*if (_config.Distance != 333)
                             {
                                 player.GlowThroughWalls = 5;
-                            }
+                            }*/
                         }
                     }
                 }
