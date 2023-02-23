@@ -48,17 +48,6 @@ namespace ksenz.Game.Apex.Feature.Sense
                         }
                     }
                 }
-                if (!localPlayer.IsGrounded())
-                {
-                    if (state.Buttons.InForwardState == 0)
-                    {
-                        state.Buttons.InForwardState = (byte)5;
-                    }
-                    else
-                    {
-                        state.Buttons.InForwardState = (byte)4;
-                    }
-                }
             }
         }
 
