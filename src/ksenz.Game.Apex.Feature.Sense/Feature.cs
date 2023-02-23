@@ -34,11 +34,11 @@ namespace ksenz.Game.Apex.Feature.Sense
                             player.GlowThroughWalls = (byte)(player.Visible ? 2 : 2);
                             if (player.Visible)
                             {
-                                player.GlowColor = new Vector(0.0f, 3.0f, 0.0f);
+                                player.GlowColor = new Vector(0.0f, 2.0f, 0.0f);
                             }
                             else if (player.Shield >= 120)
                             {
-                                player.GlowColor = new Vector(3.0f, 0.0f, 0.0f);
+                                player.GlowColor = new Vector(2.0f, 0.0f, 0.0f);
                             }
                             else if (player.Shield >= 100)
                             {
