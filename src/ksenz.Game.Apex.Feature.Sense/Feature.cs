@@ -32,7 +32,27 @@ namespace ksenz.Game.Apex.Feature.Sense
                         {
                             player.GlowEnable = (byte)(1);
                             player.GlowThroughWalls = (byte)(player.Visible ? 2 : 2);
-                            player.GlowColor = (player.Visible? new Vector(10.0f, 0.0f, 0.0f) : new Vector(0.0f, 11.0f, 15.0f));
+                            if (player.Visible)
+                            {
+                                player.GlowColor = new Vector(0.0f, 3.0f, 0.0f);
+                            }
+                            else if (player.Shield >= 120)
+                            {
+                                player.GlowColor = new Vector(3.0f, 0.0f, 0.0f);
+                            }
+                            else if (player.Shield >= 100)
+                            {
+                                player.GlowColor = new Vector(1.5f, 0.0f, 1.5f);
+                            }
+                            else if (player.Shield >= 75)
+                            {
+                                player.GlowColor = new Vector(0.0f, 1.0f, 2.0f);
+                            }
+                            else
+                            {
+                                player.GlowColor = new vector (1.0f, 1.0f, 1.0f);
+                                //player.GlowColor = (player.Visible? new Vector(10.0f, 0.0f, 0.0f) : new Vector(0.0f, 11.0f, 15.0f));
+                            }
                             /*if (_config.Distance != 333)
                             {
                                 player.GlowThroughWalls = (byte)(player.Visible ? 1 : 2);
