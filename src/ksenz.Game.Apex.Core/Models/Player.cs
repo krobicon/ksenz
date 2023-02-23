@@ -24,6 +24,7 @@ namespace ksenz.Game.Apex.Core.Models
         private readonly Access<Vector> _viewAngle;
         private readonly Access<uint> _flags;
         private readonly Access<Vector> _glowColor;
+	private readonly Access<uint> _shield;
 
         #region Constructors
 
@@ -42,6 +43,7 @@ namespace ksenz.Game.Apex.Core.Models
             _viewAngle = driver.Access(address + offsets.PlayerViewAngle, VectorType.Instance);
             _flags = driver.Access(address + offsets.PlayerFlags, UInt32Type.Instance);
             _glowColor = driver.Access(address + offsets.PlayerGlowColor, VectorType.Instance);
+	    _shield = driver.Access(address + offsets.PlayerShield, UInt32Type.Instance);
         }
 
         #endregion
@@ -150,6 +152,13 @@ namespace ksenz.Game.Apex.Core.Models
 	        get => _glowColor.Get();
 	        set => _glowColor.Set(value);
 	    }
+	   
+        [JsonPropertyName("shield")]
+	    public uint Shield
+	    {
+	        get => _shield.Get();
+	        set => _shield.Set(value);
+	    }
 
         [JsonPropertyName("visible")]
         public bool Visible => _lastVisibleTime.Visible;
@@ -173,6 +182,7 @@ namespace ksenz.Game.Apex.Core.Models
             _viewAngle.Update(frameTime);
             _flags.Update(frameTime);
             _glowColor.Update(frameTime);
+	    _shield.Update(frameTime);
         }
 
         #endregion
