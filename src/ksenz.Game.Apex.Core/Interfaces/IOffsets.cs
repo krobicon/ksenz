@@ -5,12 +5,8 @@
         #region Properties
 
         uint ButtonInAttack { get; }
-        uint ButtonInSpeed { get; }
         uint ButtonInWalk { get; }
         uint ButtonInZoom { get; }
-        uint ButtonInForwardDown1 { get; }
-        uint ButtonInForwardDown2 { get; }
-        uint ButtonInForwardState { get; }
         uint CoreEntityList { get; }
         uint CoreLevelName { get; }
         uint CoreLocalPlayer { get; }
