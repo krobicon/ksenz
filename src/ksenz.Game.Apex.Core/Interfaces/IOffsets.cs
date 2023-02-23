@@ -23,6 +23,7 @@
         uint PlayerVecPunchWeaponAngle { get; }
         uint PlayerViewAngle { get; }
         uint PlayerFlags { get; }
+        uint PlayerGlowColor { get; }
 
         #endregion
     }
