@@ -54,6 +54,7 @@ namespace ksenz.Game.Apex.Models
         public uint PlayerVecPunchWeaponAngle => _ini.Get("DataMap.C_Player", "m_currentFrameLocalPlayer.m_vecPunchWeapon_Angle");
         public uint PlayerViewAngle => _ini.Get("DataMap.C_Player", "m_ammoPoolCapacity") - 0x14;
         public uint PlayerFlags => _ini.Get("RecvTable.DT_Player", "m_fFlags");
+        public uint PlayerGlowColor => _ini.Get("RecvTable.DT_HighlightSettings", "m_highlightParams") + 0x18;
 
         #endregion
     }
