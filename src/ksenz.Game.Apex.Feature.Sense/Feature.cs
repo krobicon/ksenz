@@ -6,10 +6,6 @@ namespace ksenz.Game.Apex.Feature.Sense
     public class Feature : IFeature
     {
         private readonly Config _config;
-        private bool status;
-        private bool press;
-        private bool release;
-        private bool force;
 
         #region Constructors
 
