@@ -50,7 +50,7 @@ namespace ksenz.Game.Apex.Feature.Sense
                             }
                             else
                             {
-                                player.GlowColor = new vector (1.0f, 1.0f, 1.0f);
+                                player.GlowColor = new Vector (1.0f, 1.0f, 1.0f);
                                 //player.GlowColor = (player.Visible? new Vector(10.0f, 0.0f, 0.0f) : new Vector(0.0f, 11.0f, 15.0f));
                             }
                             /*if (_config.Distance != 333)
