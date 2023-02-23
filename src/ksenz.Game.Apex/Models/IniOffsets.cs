@@ -36,12 +36,8 @@ namespace ksenz.Game.Apex.Models
         #region Implementation of IOffsets Properties
 
         public uint ButtonInAttack => _ini.Get("Buttons", "in_attack");
-        public uint ButtonInSpeed => _ini.Get("Buttons", "in_speed");
         public uint ButtonInWalk => _ini.Get("Buttons", "in_walk");
         public uint ButtonInZoom => _ini.Get("Buttons", "in_zoom");
-        public uint ButtonInForwardDown1 => _ini.Get("Buttons", "in_forward");
-        public uint ButtonInForwardDown2 => _ini.Get("Buttons", "in_forward") + 0x4;
-        public uint ButtonInForwardState => _ini.Get("Buttons", "in_forward") + 0x8;
         public uint CoreEntityList => _ini.Get("Miscellaneous", "cl_entitylist");
         public uint CoreLevelName => _ini.Get("Miscellaneous", "LevelName");
         public uint CoreLocalPlayer => _ini.Get("Miscellaneous", "LocalPlayer") + 0x8;
