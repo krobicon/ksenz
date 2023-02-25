@@ -38,6 +38,8 @@ namespace ksenz.Game.Apex.Models
         public uint ButtonInAttack => _ini.Get("Buttons", "in_attack");
         public uint ButtonInWalk => _ini.Get("Buttons", "in_walk");
         public uint ButtonInZoom => _ini.Get("Buttons", "in_zoom");
+        public uint ButtonInForward => _ini.Get("Buttons", "in_forward");
+        public uint ButtonInForwardState => _ini.Get("Buttons", "in_forward") + 0x8;
         public uint CoreEntityList => _ini.Get("Miscellaneous", "cl_entitylist");
         public uint CoreLevelName => _ini.Get("Miscellaneous", "LevelName");
         public uint CoreLocalPlayer => _ini.Get("Miscellaneous", "LocalPlayer") + 0x8;
