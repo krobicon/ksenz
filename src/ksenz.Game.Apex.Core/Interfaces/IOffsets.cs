@@ -7,6 +7,8 @@
         uint ButtonInAttack { get; }
         uint ButtonInWalk { get; }
         uint ButtonInZoom { get; }
+        uint ButtonInForward { get; }
+        uint ButtonInForwardState { get; }
         uint CoreEntityList { get; }
         uint CoreLevelName { get; }
         uint CoreLocalPlayer { get; }
